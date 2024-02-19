@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  background-color: #DEECF7;
+
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #1F3F68;
+  background-image: url('../images/icons/Union.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border-color: none;
+}

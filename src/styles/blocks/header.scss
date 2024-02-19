@@ -1,0 +1,105 @@
+.header {
+  height: 100vh;
+  padding: 40px 0 70px 0;
+
+  background-image: linear-gradient(0deg,
+  hsl(208deg 63% 75%) 0%,
+  hsl(210deg 63% 88%) -2%,
+  hsl(0deg 0% 100%) 28%);
+
+
+  @include onDesktop {
+    background-image: url('../images/background/Header-banner.png'),linear-gradient(0deg,
+    hsl(208deg 63% 75%) 0%,
+    hsl(210deg 63% 88%) -2%,
+    hsl(0deg 0% 100%) 28%);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+
+    @include onTablet {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__menu-btn {
+    padding: 0;
+    background-color: unset;
+    border: none;
+
+    @include onDesktop {
+      @include hover(transform, scale(1.2));
+    }
+  }
+
+  &__content {
+    @include grid(4, 64px);
+
+    @include onTablet {
+      @include grid(6, 90px);
+    }
+
+    @include onDesktop {
+      @include grid(12, 65px);
+    }
+  }
+
+  &__title {
+    margin-bottom: 56px;
+
+    @extend %bold-800-text;
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $primary-title-color;
+
+    @include gridItemsPosition(1, 4);
+
+    @include onTablet {
+      font-size: 64px;
+      line-height: 83px;
+      letter-spacing: 0.04em;
+
+      @include gridItemsPosition(1, 6);
+    }
+
+    @include onDesktop {
+      font-size: 64px;
+      line-height: 83px;
+      letter-spacing: 0.04em;
+
+      @include gridItemsPosition(1, 7);
+    }
+  }
+
+  &__text {
+    margin-bottom: 60px;
+
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    color: $text-color;
+
+    @include gridItemsPosition(1, -1);
+
+    @include onTablet {
+      width: 425px;
+      margin-bottom: 72px;
+
+      @include gridItemsPosition(1, 5);
+    }
+  }
+
+  &__more-btn {
+    width: 220px;
+    @extend %medium-text;
+    @include gridItemsPosition(1, 3);
+  }
+}

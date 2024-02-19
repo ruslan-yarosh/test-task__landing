@@ -1,0 +1,29 @@
+@mixin grid($columns, $width) {
+  display: grid;
+  grid-template-columns: repeat($columns, $width);
+  column-gap: 30px;
+}
+
+@mixin gridItemsPosition($start-line, $end-line) {
+  grid-column-start: $start-line;
+  grid-column-end: $end-line;
+}
+
+@mixin onTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} 0.3s;
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}

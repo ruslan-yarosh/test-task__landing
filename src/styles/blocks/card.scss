@@ -1,0 +1,63 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 23px 24px;
+  position: relative;
+
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px 0px #1070B133;
+
+  @include onDesktop {
+    padding: 48px 32px 24px;
+  }
+
+  &__img {
+    display: block;
+    height: 132px;
+    align-self: center;
+    margin-bottom: 48px;
+  }
+
+  &__icons {
+    position: absolute;
+    top: -25px;
+    left: 37px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+
+    @extend %bold-700-text;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0.05em;
+    color: $primary-title-color;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.08em;
+    color: $text-color;
+  }
+
+  &__btn {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 9px;
+
+    @extend %semibold-italic;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: $primary-btn-color;
+
+    @include onDesktop {
+      @include hover(transform, scale(1.1));
+    }
+  }
+}

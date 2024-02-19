@@ -1,0 +1,24 @@
+.btn {
+  &--primary {
+    display: block;
+    padding: 15px 40px;
+    border-radius: 10px;
+    background: $primary-btn-color;
+    box-shadow: 5px 10px 20px 0px #356EAD33;
+
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.07em;
+    text-align: center;
+
+    color: $white;
+
+    @include onDesktop {
+      @include hover(background-color, #4799E3);
+
+      &:active {
+        background-color: #4088C9;
+      }
+    }
+  }
+}
